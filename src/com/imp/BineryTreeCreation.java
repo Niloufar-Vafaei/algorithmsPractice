@@ -8,6 +8,7 @@ package com.imp;
 
 /* Class containing left and right child of current
 node and key value*/
+//i just chenge the code that i can undrastand the push method
 class Node {
     int key;
     Node left, right;
