@@ -1,11 +1,12 @@
 package com.imp;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class ReverseString {
-    public void reverse(String s){
-        
+    public String reverse(String s) {
+        StringBuilder rev = new StringBuilder();
+
+        for (int i = s.length(); i >= 0; --i) {
+            rev.append(s.charAt(i));
+        }
+        return rev.toString();
     }
 }
