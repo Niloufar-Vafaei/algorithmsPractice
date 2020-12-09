@@ -1,10 +1,10 @@
 package com.imp;
 
-public class ReverseString {
+public class Reverse {
     public String reverse(String s) {
         StringBuilder rev = new StringBuilder();
 
-        for (int i = s.length(); i >= 0; --i) {
+        for (int i = s.length()-1; i >= 0; --i) {
             rev.append(s.charAt(i));
         }
         return rev.toString();
