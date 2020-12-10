@@ -1,7 +1,5 @@
 package com.imp;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class ValidAnagram {
     public boolean isAnagram(String s, String t) {

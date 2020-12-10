@@ -1,2 +1,7 @@
 # Project exclude paths
 /out/
+.classpath
+.project
+.idea/misc.xml
+algorithmsPractice.iml
+.idea/libraries/Maven__Arquillian_JUnit_Release.xml

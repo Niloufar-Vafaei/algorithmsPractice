@@ -15,6 +15,7 @@ import java.util.List;
 public class CreateTargetArrayGivenOrder {
     public int[] createTargetArrayV2(int[] nums, int[] index) {
         List a = new ArrayList();
+
         for (int i = 0; i < nums.length; i++) {
             a.add(index[i], nums[i]);
         }

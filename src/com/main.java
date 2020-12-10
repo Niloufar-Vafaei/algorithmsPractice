@@ -1,8 +1,8 @@
-package com.imp;
+package com;
 
 public class main {
     public static void main(String[] args) {
-        char ch = '€';
+        char ch = '�';
         int ascii = ch;
         // You can also cast char to int
         int castAscii = ch;
