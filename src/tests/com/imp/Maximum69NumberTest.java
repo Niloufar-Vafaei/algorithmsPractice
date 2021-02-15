@@ -1,5 +1,6 @@
 package com.imp;
 
+import com.imp.Numbers.Maximum69Number;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

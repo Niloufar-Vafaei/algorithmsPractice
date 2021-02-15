@@ -1,5 +1,6 @@
 package com.imp;
 
+import com.imp.Numbers.RunningSumOfOneDArray;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

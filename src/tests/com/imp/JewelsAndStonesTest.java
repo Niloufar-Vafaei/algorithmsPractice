@@ -1,5 +1,6 @@
 package com.imp;
 
+import com.imp.HashTable.JewelsAndStones;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

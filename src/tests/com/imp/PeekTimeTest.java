@@ -1,7 +1,7 @@
 package com.imp;
 
-import com.imp.PeekTime.PeekTime;
-import com.imp.PeekTime.WorkTask;
+import com.imp.CompanyInterview.PeekTime.PeekTime;
+import com.imp.CompanyInterview.PeekTime.WorkTask;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,9 +1,8 @@
 package com.imp;
 
+import com.imp.HashTable.NumberOfGoodPairs;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class NumberOfGoodPairsTest {
 

@@ -1,9 +1,9 @@
 package com.imp;
 
-import org.junit.Assert;
+import com.imp.String.DefangingAnIPAddress;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DefangingAnIPAddressTest {
 
