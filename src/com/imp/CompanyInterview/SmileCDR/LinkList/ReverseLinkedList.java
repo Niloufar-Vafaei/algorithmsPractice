@@ -18,22 +18,23 @@ import java.util.Stack;
 public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         if(head==null)return head;
+
         Stack<ListNode> reversResult=new Stack<>();
         reversResult.push(head);
         while (head.next!=null){
             head = head.next;
             reversResult.push(head);
         }
-        reversResult.iterator().forEachRemaining(c->System.out.print(c.val));
-        ListNode h=reversResult.pop();
-        ListNode c=h;
+        //reversResult.iterator().forEachRemaining(c->System.out.print(c.val));
+        ListNode newHead=reversResult.pop();
+        ListNode c=newHead;
         while (!reversResult.isEmpty()){
                 ListNode nextNode=reversResult.pop();
                 c.next=nextNode;
                 c=nextNode;
         }
         c.next=null;
-        return h;
+        return newHead;
     }
     public ListNode reverseListWithoutExtraMemory(ListNode head) {
         // is there something to reverse?

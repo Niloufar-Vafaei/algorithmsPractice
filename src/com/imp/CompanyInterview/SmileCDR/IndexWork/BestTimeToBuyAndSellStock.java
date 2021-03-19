@@ -20,13 +20,39 @@ public class BestTimeToBuyAndSellStock {
             }
         }
         int sellPrice = prices[buyIndex];
-        for (int j=buyIndex;j<prices.length;j++){
-            if(sellPrice<prices[j])
-                sellPrice=prices[j];
+        for (int j = buyIndex; j < prices.length; j++) {
+            if (sellPrice < prices[j])
+                sellPrice = prices[j];
         }
-        if (buyPrice > sellPrice|| buyPrice==sellPrice)
+        if (buyPrice > sellPrice || buyPrice == sellPrice)
             return 0;
         else return sellPrice - buyPrice;
     }
 
+    public int maxProfitKadane(int[] prices) {
+        int maxCur = 0, maxSoFar = 0;
+        for (int i = 1; i < prices.length; i++) {
+            maxCur = Math.max(0, maxCur += prices[i] - prices[i - 1]);
+            maxSoFar = Math.max(maxCur, maxSoFar);
+        }
+        return maxSoFar;
+    }
+
+    public int maxProfitForLoop(int[] prices) {
+        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+        int minIndex = 0;
+        int maxIndex = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < min && minIndex <= maxIndex) {
+                min = prices[i];
+                minIndex = i;
+            } else if (prices[i] > max && maxIndex >= minIndex) {
+                max=prices[i];
+                maxIndex=i;
+            }
+        }
+        System.out.print(min+"+++"+max);
+        if(min == Integer.MAX_VALUE||max==Integer.MIN_VALUE)return  0;
+        else return max-min;
+    }
 }

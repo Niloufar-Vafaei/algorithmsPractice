@@ -41,9 +41,4 @@ public class SingleNumber {
         return ans;
     }
 
-    public int singleNumberStream(int[] nums) {
-//        Map<Integer,int[]> cou= Arrays.stream(nums)
-//                .collect((groupingBy())
-        return -1;
-    }
 }

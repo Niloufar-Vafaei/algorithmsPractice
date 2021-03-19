@@ -11,9 +11,9 @@ class AlternatingCharactersTest {
     void numberDeletion() {
         AlternatingCharacters sample=new AlternatingCharacters();
         String input ="BABABABA";
-        int acualResult= sample.numberDeletion(input);
+        int actualResult= sample.numberDeletion(input);
         int expectedResult=0;
-        assertEquals(expectedResult, acualResult);
+        assertEquals(expectedResult, actualResult);
 
     }
 }

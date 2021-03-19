@@ -14,14 +14,12 @@ public class FindAllNumbersDisappearedInArray {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         Map<Integer, Integer> tmp = new HashMap<>();
         for (int c : nums) {
-            if (tmp.containsKey(c))
-                tmp.put(c, tmp.get(c) + 1);
-            else
-                tmp.put(c, 1);
+            tmp.put(c, tmp.getOrDefault(c, 0) + 1);
         }
-        List<Integer> result=new ArrayList<>();
-        for(int i=1;i<=nums.length;i++){
-            if(!tmp.containsKey(i))
+
+        List<Integer> result = new ArrayList<>();
+        for (int i = 1; i <= nums.length; i++) {
+            if (!tmp.containsKey(i))
                 result.add(i);
         }
         return result;

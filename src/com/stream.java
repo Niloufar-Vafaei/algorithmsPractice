@@ -146,6 +146,8 @@ public class stream {
         //solution("4 5 6 - 7 +");
         SearchOnPhoneBook obj = new SearchOnPhoneBook();
         String result = obj.solution(new String[]{"sam", "madh", "adel", "amir"}, new String[]{"5479", "7890", "234", "47654"}, "47");
+
+
     }
 
     private static int checkRange(int n) {
@@ -191,6 +193,7 @@ public class stream {
                 }
             } else
                 stack.push(checkRange(Integer.valueOf(c)));
+
         }
         return stack.pop();
     }

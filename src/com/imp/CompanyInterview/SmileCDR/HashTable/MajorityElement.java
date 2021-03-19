@@ -19,13 +19,16 @@ public class MajorityElement {
                 tmp.put(c, 1);
             }
         }
-        Map.Entry<Integer, Integer> max = null;
+        //Map.Entry<Integer, Integer> max = null;
+        Integer max=Integer.MIN_VALUE;
+        Integer key=0;
         for (Map.Entry<Integer, Integer> entry : tmp.entrySet()) {
-            if (max == null || entry.getValue().compareTo(max.getValue()) > 0) {
-                max = entry;
+            if ( entry.getValue().compareTo(max) > 0) {
+                max = entry.getValue();
+                key=entry.getKey();
             }
         }
-        return max.getKey();
+        return key;
     }
 
     public int majorityElementStream(int[] nums) {
