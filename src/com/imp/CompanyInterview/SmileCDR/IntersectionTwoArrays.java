@@ -5,25 +5,21 @@ import java.util.*;
 /*350. Intersection of Two Arrays II*/
 public class IntersectionTwoArrays {
     public int[] intersect(int[] nums1, int[] nums2) {
-        Map<Integer, Integer> num1Mapper = new HashMap<>();
-        for (int tmp : nums1) {
-            num1Mapper.put(tmp, num1Mapper.getOrDefault(tmp, 0) + 1);
+        Map<Integer, Integer> base = new HashMap<>();
+        for (int s : nums1) {
+            base.put(s, base.getOrDefault(s, 0) + 1);
         }
-        List<Integer> result = new ArrayList<>();
-        for (int c : nums2) {
-            if (num1Mapper.containsKey(c)) {
-                if (!result.contains(c))
-                    result.add(c);
+        List<Integer> re = new ArrayList<>();
+        for (int tmp : nums2) {
+            if (base.containsKey(tmp) && base.get(tmp) > 0) {
+                re.add(tmp);
+                base.put(tmp, base.get(tmp) - 1);
             }
         }
-        int[] arr = new int[result.size()];
-
-        int index = 0;
-
-        for (Integer i : result) {
-            arr[index++] = i; //note the autounboxing here
+        int[] arr = new int[re.size()];
+        for (int i = 0; i < re.size(); i++) {
+            arr[i] = re.get(i);
         }
         return arr;
-
     }
 }

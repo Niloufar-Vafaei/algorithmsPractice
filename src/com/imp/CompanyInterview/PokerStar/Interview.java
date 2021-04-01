@@ -23,17 +23,22 @@ public class Interview {
         int countZero = 0;
         int countOne = 0;
         for (int i = 0; i < A.length; i += 1) {
-            if (A[i] != 0 && i % 2 == 0)
+            if (A[i] != 0 && isIndexEven(i))
                 countZero++;
-            else if (A[i] != 1 && i % 2 != 0)
+            else if (A[i] != 1 && !isIndexEven(i))
                 countZero++;
 
-            if (A[i] != 1 && i % 2 == 0)
+            if (A[i] != 1 && isIndexEven(i))
                 countOne++;
-            else if (A[i] != 0 && i % 2 != 0)
+            else if (A[i] != 0 && !isIndexEven(i))
                 countOne++;
         }
         return Math.min(countOne,countZero);
+    }
+
+    private boolean isIndexEven(int index) {
+
+        return index%2==0;
     }
 
 //    public String solution(String S, int[] A) {
